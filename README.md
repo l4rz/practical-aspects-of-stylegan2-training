@@ -16,20 +16,20 @@ I have trained a StyleGAN2 from scratch with a dataset of female portraits at 10
 *Curated samples, Ψ=0.70*
 
 ## Table of Contents
-1. [Background](#background)
-2. [Dataset preparation](#dataset)
-3. [Training environment](#training)
-  3.1. [Hardware](#hardware)
-  3.2. [Environment](#environment)
-4. [Running SG2](#running)
-  4.1. [Notes on stability](#stability)
-5. [Experiments](#experiments)
-  5.1. [Training from scratch, config-f](#foxtrot)
-  5.2. [Improving config-f quality](#foxtrot-improv)
-6. [Comments and further improvements](#further)
+1. [Background](#background)<br>
+2. [Dataset preparation](#dataset)<br>
+3. [Training environment](#training)<br>
+  3.1. [Hardware](#hardware)<br>
+  3.2. [Environment](#environment)<br>
+4. [Running SG2](#running)<br>
+  4.1. [Notes on stability](#stability)<br>
+5. [Experiments](#experiments)<br>
+  5.1. [Training from scratch, config-f](#foxtrot)<br>
+  5.2. [Improving config-f quality](#foxtrot-improv)<br>
+6. [Comments and further improvements](#further)<br>
 
 <!--
-5. [Downloads](#downloads)
+brs should be added for github
 -->
 
 ## Background<a name="background"></a>
