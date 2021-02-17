@@ -280,7 +280,7 @@ Doubling the `fmap_base` parameter leads to doubling the number of feature maps 
 | Seconds per kimg (4xV100) | 65      |   146 | 192
 
 Continued here: ["Scaling up StyleGAN2"](http://github.com/l4rz/scaling-up-stylegan2)
-
+ 
 ## Written by
 
 [l4rz](https://twitter.com/l4rz)
