@@ -10,6 +10,8 @@ Disclaimer: Neither me nor this repo is associated in any way with NVidia. I did
 </b>
 
 ## TL;DR
+<b>NOTE:</b> Continuation of this work is documented in the sequel to this writeup, ["Scaling up StyleGAN2"](http://github.com/l4rz/scaling-up-stylegan2).
+
 I have trained a StyleGAN2 from scratch with a dataset of female portraits at 1024px resolution. The samples quality was further improved by tuning the parameters and augmenting the dataset with zoomed-in images, allowing the network to learn more details and to achieved FID metrics that are comparable to the results of the original work.
 
 ![](images/seeds-23-40-66-166-347-447-511-895-908-945-973-976--070-sfw.jpg)
@@ -115,7 +117,7 @@ cd ../1024
 for i in *.jpg; do convert "$i"  -quality 95% -gravity center -background white -extent 1024x1024 "../1024px/$i"; done
 ```
 
-To control the quality of dataset, I've discared all images with resolution less than 1024px. The final dataset included 36K portraits. The dataset was converted to `.tfrecords` format using the provided `dataset_tool.py`. The size of 36K dataset was approximately 150Gb.
+To control the quality of dataset, I've discared all images with resolution less than 1024px. The final dataset, *TF36K*, included 36K portraits. The dataset was converted to `.tfrecords` format using the provided `dataset_tool.py`. The size of 36K dataset was approximately 150Gb.
 
 <b>NOTE:</b> I wasn't centering the vertical axis of portraits around face. Face sizes were not uniform, either (20-30% of image size). The aim of these experiments was to test the limits of SG2 in complex object representation, not to achieve photorealistic quiality on a perfecly aligned dataset.
 
@@ -273,7 +275,7 @@ Doubling the `fmap_base` parameter leads to doubling the number of feature maps 
 | 128px fmaps    | 256 | 512 | 512
 | 256px fmaps | 128    | 256  | 256
 | 512px fmaps | 64    | 128 | 128
-| 1024px fmaps   | 32    | 64 | 1024
+| 1024px fmaps   | 32    | 64 | 64
 | Total params | 59K |  70K | 223K
 | Seconds per kimg (4xV100) | 65      |   146 | 192
 
